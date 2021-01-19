@@ -52,10 +52,8 @@ function reverseArray(array) {
 function falsyRemover(arr) {
   falsy = arr.filter(item => item);
 
-  console.log(falsy);
+  return falsy;
 }
-
-falsyRemover([1, "", 0, null, "Fun things"]);
 
 
 
