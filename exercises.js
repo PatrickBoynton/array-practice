@@ -5,7 +5,14 @@
 
 // Put your answer below -------------------------
 
+function buildArray(str, i) {
+  const newArray = [];
+  for (var j = 0; j <= i; j++) {
+    test.push(str);
+  }
 
+  return newArray;
+}
 
 
 
