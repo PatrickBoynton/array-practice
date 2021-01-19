@@ -70,7 +70,21 @@ function falsyRemover(arr) {
 // ---------------------
 
 // Put your answer below -------------------------
+const myArray = [['name', 'Charlie'], ['color', 'brown'], ['age', 10]];
 
+function convertArray(myArray) {
+  const dict = {};
+
+  for (var i = 0; i < myArray.length; i++) {
+    dict[myArray[i][0]] =  myArray[i][1];
+  }
+
+  console.log(dict);
+
+  return dict;
+}
+
+convertArray(myArray);
 
 
 
