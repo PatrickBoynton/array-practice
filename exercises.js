@@ -29,7 +29,9 @@ function buildArray(str, i) {
 // ---------------------
 
 // Put your answer below -------------------------
-
+function reverseArray(array) {
+  return array.slice().reverse();
+}
 
 
 
@@ -47,8 +49,13 @@ function buildArray(str, i) {
 
 // Put your answer below -------------------------
 
+function falsyRemover(arr) {
+  falsy = arr.filter(item => item);
 
+  console.log(falsy);
+}
 
+falsyRemover([1, "", 0, null, "Fun things"]);
 
 
 
