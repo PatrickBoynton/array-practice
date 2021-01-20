@@ -84,8 +84,6 @@ function convertArray(myArray) {
   return dict;
 }
 
-convertArray(myArray);
-
 
 
 
@@ -102,13 +100,16 @@ convertArray(myArray);
 // ---------------------
 
 // Put your answer below -------------------------
+function removeDuplicates(arr) {
+  // Iterates over the array passed in, then kicks out any that aren't unique.
+  // If index is equal to the item they exist already.
+  return arr.filter((item, index) => arr.indexOf(item) === index);
+}
 
 
 
 
-
-
-
+console.log(removeDuplicates([1,2,3,4,5,4,3]));
 
 
 
