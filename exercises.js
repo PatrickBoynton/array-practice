@@ -81,6 +81,7 @@ function convertArray(myArray) {
     // Array[i][0], is the property name. Array[i][1] is the value.
     // In each array there are only two elements, so no need for a loop.
     //  Got this by realizing this was kind of a matrix (multi dimensional array)
+
     dict[myArray[i][0]] =  myArray[i][1];
   }
 
@@ -142,9 +143,6 @@ function ArrayChecker(arr1, arr2) {
 }
 
 
-console.log(ArrayChecker(array1, array2));
-
-
 
 
 
@@ -174,6 +172,16 @@ console.log(ArrayChecker(array1, array2));
 
 // Put your answer below -------------------------
 
+function flattenArrays(arr) {
+  // Found on SO, didn't understand the parms, so found the appropriate MDN.
+  //  Flattening is the term, if I had to guess about what is going on here,
+  // the SO post doesn't explain:
+  // It is reducing the passed in array to individual elements, then concatenates
+  // the elements into a new array.
+  return arr.reduce((accumulator, currentValue) => accumulator.concat(currentValue), []);
+}
+
+console.log(flattenArrays(flattenArrays(myArray)));
 
 
 
