@@ -50,6 +50,7 @@ function reverseArray(array) {
 // Put your answer below -------------------------
 
 function falsyRemover(arr) {
+  // Found on SO. Filters out any truthy items.
   falsy = arr.filter(item => item);
 
   return falsy;
@@ -76,6 +77,10 @@ function convertArray(myArray) {
   const dict = {};
 
   for (var i = 0; i < myArray.length; i++) {
+    // Array[i] is the individual nested array.
+    // Array[i][0], is the property name. Array[i][1] is the value.
+    // In each array there are only two elements, so no need for a loop.
+    //  Got this by realizing this was kind of a matrix (multi dimensional array)
     dict[myArray[i][0]] =  myArray[i][1];
   }
 
@@ -103,13 +108,9 @@ function convertArray(myArray) {
 function removeDuplicates(arr) {
   // Iterates over the array passed in, then kicks out any that aren't unique.
   // If index is equal to the item they exist already.
+  // Found an example on SO.
   return arr.filter((item, index) => arr.indexOf(item) === index);
 }
-
-
-
-
-console.log(removeDuplicates([1,2,3,4,5,4,3]));
 
 
 
@@ -124,6 +125,24 @@ console.log(removeDuplicates([1,2,3,4,5,4,3]));
 // ---------------------
 
 // Put your answer below -------------------------
+const array1 = [1, 2, 3, 4, 7, 5, 3];
+const array2 = [2, 3, 4, 1, 5, 7, 7];
+
+function ArrayChecker(arr1, arr2) {
+  arr1.sort();
+  arr2.sort();
+  if (arr1.length !== arr2.length) {
+    return false;
+  }
+  //  Found several examples of this, this checks each arr2 index,
+  // against arr1s value. Played around and this works on different sizes.
+  //  and even if one array is empty and the other is not. There is also a some.
+
+  return arr1.every((value, index) => value === arr2[index]);
+}
+
+
+console.log(ArrayChecker(array1, array2));
 
 
 
